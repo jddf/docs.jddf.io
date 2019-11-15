@@ -1,0 +1,94 @@
+$mdc-theme-primary: #2e7d32;
+$mdc-theme-secondary: #fff8e1;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #000000;
+
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/typography/mdc-typography";
+@import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/list/mdc-list";
+
+body {
+  margin: 0;
+}
+
+code,
+code pre {
+  font-family: "Roboto Mono", monospace;
+}
+
+.jddf-top-app-bar-link {
+  display: none;
+  text-decoration: none;
+  color: $mdc-theme-on-primary;
+  font-weight: bold;
+
+  @media screen and (min-width: #{map-get($mdc-layout-grid-breakpoints, "tablet")}) {
+    display: block;
+    margin-right: 64px;
+  }
+}
+
+.jddf-footer {
+  background-color: darken($mdc-theme-primary, 15%);
+  color: $mdc-theme-on-primary;
+
+  a {
+    color: $mdc-theme-on-primary;
+  }
+}
+
+.jddf-footer__inner {
+  @media screen and (min-width: #{map-get($mdc-layout-grid-breakpoints, "desktop")}) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.jddf-container {
+  @media screen and (min-width: #{map-get($mdc-layout-grid-breakpoints, "desktop")}) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mainmatter {
+  h1 {
+    @include mdc-typography("headline3");
+  }
+
+  h2 {
+    @include mdc-typography("headline4");
+  }
+
+  p,
+  li {
+    @include mdc-typography("body1");
+  }
+}
+
+.usecase-grid {
+  padding: 0;
+}
+
+.usecase-card {
+  width: 100%;
+}
+
+.usecase-card__primary {
+  padding: 1rem;
+}
+
+.usecase-card__title {
+  margin: 0;
+}
+
+.usecase-card__secondary {
+  margin-top: 0;
+  padding: 0 1rem 8px;
+}

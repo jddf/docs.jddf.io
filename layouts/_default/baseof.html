@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<head>
+  <title>JDDF Docs | Schema Language for JSON</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Mono:300,400,500"
+    rel="stylesheet"
+  />
+
+  <!-- prettier-ignore -->
+  {{ $style := resources.Get "scss/index.scss" | resources.ToCSS (dict "includePaths" (slice "node_modules")) | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+  <!-- in your header -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+  />
+</head>
+<body class="mdc-typography">
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section
+        class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+      >
+        <button
+          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+        >
+          check
+        </button>
+        <span class="mdc-top-app-bar__title">
+          JDDF Docs
+        </span>
+      </section>
+
+      <section
+        class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+      >
+        <a class="jddf-top-app-bar-link" href="https://play.jddf.io">Playground</a>
+        <a class="jddf-top-app-bar-link" href="https://docs.jddf.io">Docs</a>
+        <a class="jddf-top-app-bar-link" href="https://blog.jddf.io">Blog</a>
+      </section>
+    </div>
+  </header>
+
+  <div class="mdc-top-app-bar--fixed-adjust"></div>
+
+  <div class="jddf-container">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop jddf-sidebar"
+        >
+          <ul class="mdc-list">
+            <li class="mdc-list-item" tabindex="0">
+              <span class="material-icons mdc-list-item__graphic">
+                home
+              </span>
+
+              Home
+            </li>
+            <li class="mdc-list-item">
+              <span class="material-icons mdc-list-item__graphic">
+                school
+              </span>
+
+              Syntax and Features
+            </li>
+            <li role="separator" class="mdc-list-divider"></li>
+            <li class="mdc-list-item">
+              <span class="material-icons mdc-list-item__graphic">
+                code
+              </span>
+
+              Integrating
+
+              <span class="mdc-list-item__meta material-icons"
+                >expand_less</span
+              >
+            </li>
+            <li class="mdc-list-item">
+              <span class="mdc-list-item__graphic">
+                <i class="devicon-javascript-plain"></i>
+              </span>
+
+              Integrating with JavaScript
+            </li>
+            <li class="mdc-list-item">
+              <span class="mdc-list-item__graphic">
+                <i class="devicon-ruby-plain"></i>
+              </span>
+
+              Integrating with Ruby
+            </li>
+            <li class="mdc-list-item">
+              <span class="mdc-list-item__graphic">
+                <i class="devicon-python-plain"></i>
+              </span>
+
+              Integrating with Python
+            </li>
+            <li class="mdc-list-item">
+              <span class="mdc-list-item__graphic">
+                <i class="devicon-go-plain"></i>
+              </span>
+
+              Integrating with Go
+            </li>
+            <li class="mdc-list-item">
+              <span class="mdc-list-item__graphic">
+                <i class="devicon-java-plain"></i>
+              </span>
+
+              Integrating with Java
+            </li>
+            <li role="separator" class="mdc-list-divider"></li>
+            <li class="mdc-list-item">
+              <span class="material-icons mdc-list-item__graphic">
+                build
+              </span>
+
+              Tooling
+
+              <span class="mdc-list-item__meta material-icons"
+                >expand_less</span
+              >
+            </li>
+            <li class="mdc-list-item">
+              <span class="material-icons mdc-list-item__graphic"></span>
+              <span class="mdc-list-item__text">Code Generation</span>
+            </li>
+            <li class="mdc-list-item">
+              <span class="material-icons mdc-list-item__graphic"></span>
+              <span class="mdc-list-item__text">Schema Inference</span>
+            </li>
+            <li class="mdc-list-item">
+              <span class="material-icons mdc-list-item__graphic"></span>
+              <span class="mdc-list-item__text">Fuzz Testing</span>
+            </li>
+            <li class="mdc-list-item">
+              <span class="material-icons mdc-list-item__graphic"></span>
+              <span class="mdc-list-item__text"
+                >Converting from JSON Schema</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mainmatter"
+        >
+          {{ block "main" . }} {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="jddf-footer">
+    <div class="jddf-footer__inner">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p class="mdc-typography--headline6">JSON Data Definition Format</p>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__inner">
+          <div
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+          >
+            <p class="mdc-typography--body2">
+              JSON Data Definition Format is an open-source project. Please feel
+              free to ask questions or contribute by checking out any of the
+              links to the right.
+            </p>
+
+            <p class="mdc-typography--body2">
+              Whenever interacting with the JSON Data Definition Format
+              community, please adhere to our
+
+              <a
+                href="https://www.contributor-covenant.org/version/1/4/code-of-conduct"
+              >
+                Code of Conduct</a
+              >.
+            </p>
+
+            <p class="mdc-typography--body2">
+              © 2019 JSON Data Definition Format contributors
+            </p>
+          </div>
+
+          <div
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+          >
+            <p class="mdc-typography--body2">
+              <a href="https://github.com/json-schema-language">GitHub</a>
+            </p>
+
+            <p class="mdc-typography--body2">
+              <a href="https://tools.ietf.org/html/draft-ucarion-jddf-00">
+                IETF Internet-Draft
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
