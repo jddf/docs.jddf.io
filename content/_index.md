@@ -94,7 +94,8 @@ validate data and generate code.
 The JDDF community is open and welcoming, and we'd be happy to help you with
 code or other questions you might have. Join us on:
 
-* The [JSON Data Definition Slack channel](https://join.slack.com/t/jddf/shared_invite/enQtODIyODk0OTc5NjM0LTE5MGFhMzM4MWJlZDVjNzdmMDJmNmNjYThmNzBiNWE2ZjA2M2ZlZWVkNjljMTczMWUyNDVlMGUxNzY3ZTEyOWY)
+* The [JSON Data Definition Format
+  Slack](https://join.slack.com/t/jddf/shared_invite/enQtODIyODk0OTc5NjM0LTE5MGFhMzM4MWJlZDVjNzdmMDJmNmNjYThmNzBiNWE2ZjA2M2ZlZWVkNjljMTczMWUyNDVlMGUxNzY3ZTEyOWY)
 * The [`jddf` GitHub organization](https://github.com/jddf)
 
 ## Read the formal specification
