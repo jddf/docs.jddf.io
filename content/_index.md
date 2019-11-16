@@ -13,16 +13,18 @@ validate data and generate code.
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <div class="mdc-card usecase-card">
         <div class="mdc-card__primary-action">
-          <div class="usecase-card__primary">
-            <h4 class="mdc-typography mdc-typography--headline6 usecase-card__title">
-              Learn JDDF Essentials
-            </h4>
+          <a class="usecase-link" href="/syntax.html">
+            <div class="usecase-card__primary">
+              <h4 class="mdc-typography mdc-typography--headline6 usecase-card__title">
+                Learn JDDF Essentials
+              </h4>
+            </div>
+            <p class="mdc-typography mdc-typography--body2 usecase-card__secondary">
+              Learn JDDF from scratch. In five minutes, you'll have learned all of
+              JDDF's features, and will be ready to start integrating JDDF.
+            </p>
           </div>
-          <p class="mdc-typography mdc-typography--body2 usecase-card__secondary">
-            Learn JDDF from scratch. In five minutes, you'll have learned all of
-            JDDF's features, and will be ready to start integrating JDDF.
-          </p>
-        </div>
+        </a>
       </div>
     </div>
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">

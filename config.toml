@@ -1,3 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://docs.jddf.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "JDDF Docs"
+uglyurls = true
+pygmentsCodefences = true
+pygmentsStyle = "friendly"

@@ -10,6 +10,7 @@ $mdc-theme-on-secondary: #000000;
 @import "@material/card/mdc-card";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/list/mdc-list";
+@import "@material/data-table/mdc-data-table";
 
 body {
   margin: 0;
@@ -66,9 +67,60 @@ code pre {
     @include mdc-typography("headline4");
   }
 
+  h3 {
+    @include mdc-typography("headline5");
+  }
+
+  h4 {
+    @include mdc-typography("headline6");
+  }
+
   p,
   li {
     @include mdc-typography("body1");
+  }
+
+  pre {
+    padding: 16px;
+
+    code {
+      font-size: 100%;
+    }
+  }
+
+  code {
+    background-color: #f0f0f0;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+  }
+
+  .mdc-data-table {
+    width: 100%;
+  }
+
+  table {
+    @extend .mdc-data-table__table;
+  }
+
+  thead {
+    @extend .mdc-data-table__table;
+  }
+
+  tbody {
+    @extend .mdc-data-table__content;
+  }
+
+  tr {
+    @extend .mdc-data-table__header-row;
+  }
+
+  th {
+    @extend .mdc-data-table__header-cell;
+  }
+
+  td {
+    @extend .mdc-data-table__cell;
   }
 }
 
@@ -78,6 +130,11 @@ code pre {
 
 .usecase-card {
   width: 100%;
+}
+
+.usecase-link {
+  text-decoration: none;
+  color: $mdc-theme-on-secondary;
 }
 
 .usecase-card__primary {
@@ -91,4 +148,21 @@ code pre {
 .usecase-card__secondary {
   margin-top: 0;
   padding: 0 1rem 8px;
+}
+
+.example {
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+.example__schema {
+  border-left-color: #0077c2;
+}
+
+.example__ok {
+  border-left-color: #2e7d32;
+}
+
+.example__bad {
+  border-left-color: #ba000d;
 }

@@ -2,8 +2,10 @@
   "dependencies": {
     "@material/button": "^3.0.0",
     "@material/card": "^3.1.0",
+    "@material/checkbox": "^3.0.0",
+    "@material/data-table": "^3.0.0",
     "@material/layout-grid": "^3.0.0",
-    "@material/list": "^4.0.0",
+    "@material/list": "^3.0.0",
     "@material/top-app-bar": "^3.0.0",
     "prettier": "^1.18.2"
   },
